@@ -171,7 +171,7 @@ def run_application():
                     output_columns = st.columns(len(recommendations_list))
                     for index_value, recommended_isbn in enumerate(recommendations_list):
                         with output_columns[index_value]:
-                            is_hit = "✅ HIT" if recommended_isbn in relevant_isbns_set else "❌ MISS"
+                            is_hit = "HIT" if recommended_isbn in relevant_isbns_set else "MISS"
                             st.write(f"**{is_hit}**")
                             display_book_details(recommended_isbn, books_dataframe)
                             
